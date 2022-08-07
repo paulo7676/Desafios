@@ -23,7 +23,9 @@ O numero romano MLVIII em inteiro é 1058
 - Um codigo para criar uma matriz de adjacencia de uma constelação de estrelas (minimo 4 , maximo 8) e checar se 2 estrelas estão diretamente interligadas
 - Uma estrela "i" está ligada a uma "j" se M[i][j] = 1
 - Input do usuário: Tamanho da matriz para ser criada, estrelas a serem comparadas (utilização do Window prompt)
+- Exemplo de output:
 
+![alt text](https://github.com/paulo7676/Desafios/blob/master/Output_D2.png)
 ---
 
 ## Desafio 03 (Poker Espacial)
