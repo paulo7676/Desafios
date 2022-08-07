@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head></head>
+
+<body>
+    <meta charset="utf-8">
+    <script>
+
+        //input do tamanho da matriz / estrela 1 / estrela 2
+        do {
+            var X = parseInt(prompt("Digite a quantidade de estrelas da constelação (mínimo 4, máximo 8)"))
+        } while (X < 4 || X > 8)
+
+        do {
+            var Estrela_1 = parseInt(prompt("Digite a primeira estrela"))
+        } while (Estrela_1 < 0 || Estrela_1 >= X)
+
+        do {
+            var Estrela_2 = parseInt(prompt("Digite a segunda estrela"))
+        } while (Estrela_2 < 0 || Estrela_2 >= X)
+        
+        //criação da matriz
+        var Constalacao = new Array(X).fill(0) 
+        for (let i = 0; i < Constalacao.length ; i++) {
+            Constalacao[i] = new Array(X).fill(0) 
+       }
+
+    //preenchimento da matriz
+        for (let i = 0; i < Constalacao.length ; i++) {
+            
+            //criação de um paragrafo para facilitar a visualização da matriz
+            const para = document.createElement("p");
+            
+            for (let j = i+1; j < Constalacao[i].length ; j++) {
+
+                ligacao = Math.round(Math.random())
+                Constalacao[i][j] = ligacao
+                Constalacao[j][i] = ligacao
+
+            }
+
+            //adição do texto para a matriz
+            para.innerText = "["+Constalacao[i]+"]"
+	        document.body.appendChild(para);
+
+        //resultado
+        }
+        if (Constalacao[Estrela_1][Estrela_2] == 1){
+            document.write("As estrelas "+Estrela_1+" e "+Estrela_2+" estão ligadas");
+        }else{
+            document.write("As estrelas "+Estrela_1+" e "+Estrela_2+" não estão ligadas");
+        }
+
+    </script>
+</body>
+
+</html>
